@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate | Baal Dan Charities</title>
+<meta name="description" content="Donate to Baal Dan Charities — a 501(c)(3) where nearly 100% of every gift funds food, education and WASH programs for vulnerable children. One-time or monthly, online, by check, or bank wire.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22><circle cx=%2224%22 cy=%2224%22 r=%2223%22 fill=%22%23146a6d%22/></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div data-include="partials/header.html"></div>
+
+<main>
+  <section class="hero compact">
+    <div class="hero-blob shape1"></div>
+    <div class="hero-blob shape2"></div>
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow" style="color:var(--gold-500);">Every gift, tracked to a program</p>
+        <h1>Fund a child's food, education, and future.</h1>
+        <p class="lede">100% volunteer-run means your donation goes to work immediately. Choose an amount and frequency below — no account required.</p>
+        <div class="hero-badges">
+          <div class="hero-badge"><b data-count="1.1" data-suffix="%" data-decimals="1">0</b><span>overhead, 2024</span></div>
+          <div class="hero-badge"><b data-count="250" data-prefix="$">0</b><span>receipt threshold</span></div>
+          <div class="hero-badge"><b>501(c)(3)</b><span>tax-deductible</span></div>
+        </div>
+      </div>
+
+      <div class="donate-panel reveal" data-donate-panel data-testid="donate-panel">
+        <div class="freq-toggle">
+          <button type="button" class="active" data-freq="monthly">Monthly</button>
+          <button type="button" data-freq="once">One-time</button>
+        </div>
+        <div class="amount-grid">
+          <button type="button" class="amount-btn" data-amount="25"><b>$25</b><span>1 week of meals</span></button>
+          <button type="button" class="amount-btn active" data-amount="50"><b>$50</b><span>school supplies</span></button>
+          <button type="button" class="amount-btn" data-amount="100"><b>$100</b><span>WASH access</span></button>
+          <button type="button" class="amount-btn" data-amount="250"><b>$250</b><span>education term</span></button>
+          <button type="button" class="amount-btn" data-amount="500"><b>$500</b><span>nutrition program</span></button>
+          <button type="button" class="amount-btn" data-amount="1000"><b>$1,000</b><span>become a Luminary</span></button>
+        </div>
+        <div class="custom-amount">
+          <span>$</span>
+          <input type="number" id="custom-amount" min="1" placeholder="Enter a custom amount">
+        </div>
+        <div class="impact-line" data-impact-line></div>
+        <form id="donate-form" data-paypal-business="REPLACE_WITH_PAYPAL_BUSINESS_EMAIL">
+          <button type="submit" class="btn btn-primary btn-block">
+            Donate <span data-total-label style="font-weight:800;"></span>
+          </button>
+        </form>
+        <p style="font-size:.76rem;color:var(--ink-500);text-align:center;margin:12px 0 0;">Secure checkout via PayPal · cancel or change anytime</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYS TO GIVE -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">More ways to give</p>
+        <h2>Choose the method that works for you</h2>
+      </div>
+      <div class="way-list">
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+          <h3>Online via PayPal</h3>
+          <p>Our preferred method — secure, instant, and you'll receive an immediate email receipt for your records.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4zM4 9h16M9 4v5"/></svg></div>
+          <h3>Check or money order</h3>
+          <p>Made payable to "Baal Dan Charities." <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Contact us</a> for our current mailing address.</p>
+        </div>
+        <div class="card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div>
+          <h3>Bank wire</h3>
+          <p>Available for larger gifts upon request — <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">reach out</a> and we'll send wire instructions.</p>
+        </div>
+      </div>
+      <div class="reveal" style="max-width:640px;margin:40px auto 0;text-align:center;">
+        <p style="font-size:.92rem;color:var(--ink-500);">Baal Dan holds 501(c)(3) tax-exempt status (Federal Tax ID 20-4658983). Donations are tax-deductible, and a formal receipt is provided for gifts over $250. Prefer to fund overhead directly, or offer pro bono professional services instead? <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Contact us</a> — we'd love to talk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATCHING -->
+  <section id="matching" style="background:var(--cream-100);">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Double your impact</p>
+        <h2>Employee Giving &amp; Company Matching</h2>
+        <p class="lede" style="margin:0 auto;">Many employers match charitable gifts dollar-for-dollar (or more). Check if yours does.</p>
+      </div>
+      <div class="reveal" style="max-width:520px;margin:0 auto;">
+        <form id="match-form">
+          <div class="match-search">
+            <input type="text" placeholder="Search your employer's name…" aria-label="Employer name">
+            <button class="btn btn-primary btn-sm" type="submit">Check</button>
+          </div>
+        </form>
+        <div id="match-result" role="status"></div>
+      </div>
+      <p style="text-align:center;margin-top:32px;color:var(--ink-500);font-size:.9rem;">Companies that have matched Baal Dan gifts before include:</p>
+      <div class="logo-strip reveal">
+        <span class="logo-chip">Microsoft (MSGive)</span>
+        <span class="logo-chip">AT&amp;T</span>
+        <span class="logo-chip">Esurance</span>
+        <span class="logo-chip">Wells Fargo</span>
+        <span class="logo-chip">Tellabs</span>
+        <span class="logo-chip">ING</span>
+        <span class="logo-chip">Liberty Mutual</span>
+        <span class="logo-chip">eBay</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Why they give</p>
+        <h2>Donor Testimonials</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">By donating to Baal Dan, you are helping children in need. Children are our future.</p><p class="t-name">Mohit Gour</p><p class="t-role">President, Market Xcel USA</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">It is impressive to learn how Baal Dan mobilizes resources efficiently and overcomes obstacles.</p><p class="t-name">Steven Lange</p><p class="t-role">Corporate Relations, American Cancer Society</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Tanya Pinto has done amazing things with Baal Dan and others should learn from her experience.</p><p class="t-name">David Charney</p><p class="t-role">President, Stealth Monitoring</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">I've followed Baal Dan since its beginnings, and what they've been able to accomplish is nothing short of remarkable.</p><p class="t-name">Ron Henderson</p><p class="t-role">Group Creative Director, TRG</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">It's a joy giving to Baal Dan because you can see the impact it's made in children's lives over the years.</p><p class="t-name">Quan Tran</p><p class="t-role">Founder, Quan Tran Does</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">I have had the privilege of witnessing the incredible impact of Baal Dan Charities in their mission.</p><p class="t-name">Steve Quirk</p><p class="t-role">President, Quirk's Media</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Hearing Tanya recount her experiences with vulnerable children in India struck a personal note for me.</p><p class="t-name">Mel Ruffini</p><p class="t-role">Construction Executive, NYC</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Tanya Pinto came to our martial arts summer camp and spent time explaining Baal Dan Charities.</p><p class="t-name">Skyler Zoppi</p><p class="t-role">President, True Martial Arts</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">My family gives to Baal Dan because we know that 100% of our donations go directly to children.</p><p class="t-name">Reed Cundiff</p><p class="t-role">Board Member, Baal Dan</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Supporting Baal Dan Charities isn't a question — it's a necessity. Their work translates into real change.</p><p class="t-name">Amy R. Castelda</p><p class="t-role">Partner, W5</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">You change generations when you change a child's life. This is a wonderful way to impact today.</p><p class="t-name">Jami Pulley</p><p class="t-role">CEO, Veridata</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Baal Dan Charities' unwavering dedication to supporting vulnerable children worldwide is truly inspiring.</p><p class="t-name">April Bell</p><p class="t-role">CEO, Made with Empathy</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">The moment of clarity happened at a fundraising dinner. Tanya redefined a "normal day."</p><p class="t-name">Mat Varghese</p><p class="t-role">Donor &amp; Supporter, Dallas</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">The hook for me was knowing that any effort towards supporting Baal Dan had a direct, short-term effect.</p><p class="t-name">Jeenal Shah</p><p class="t-role">Volunteer, New York City</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Helping others, especially children, is my passion. So when Baal Dan offered to help kids, I said yes.</p><p class="t-name">Lulayn Awgichew</p><p class="t-role">Volunteer, Ethiopia</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Most people I know are willing to give, but there's often a trust barrier that causes hesitation.</p><p class="t-name">Jeremy Hastings</p><p class="t-role">US Diplomat &amp; Advisory Board Member</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">Baal Dan is one of the very few international charities on this planet that is truly transparent.</p><p class="t-name">Prem Menon</p><p class="t-role">Former Baal Dan UT San Antonio President</p></div>
+        <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">When you first started "Baal Dan" you had a lot of support because people believed in you.</p><p class="t-name">Joe Mercer</p><p class="t-role">The Richards Group</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--cream-100);">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Questions</p>
+        <h2>Giving FAQ</h2>
+      </div>
+      <div style="max-width:720px;margin:0 auto;">
+        <div class="accordion-item open reveal">
+          <div class="accordion-head">How is my donation used? <span class="plus"></span></div>
+          <div class="accordion-body" style="max-height:200px;"><p>Your donation supports orphanages, food and education programs, and can also sponsor a specific child's education. Because Baal Dan is entirely volunteer-run, nearly 100% of what you give goes directly to feeding and educating children in need.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <div class="accordion-head">Is my gift tax-deductible? <span class="plus"></span></div>
+          <div class="accordion-body"><p>Yes. Baal Dan Charities is a 501(c)(3) public charity (Federal Tax ID 20-4658983). You'll receive a formal receipt for any gift over $250.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <div class="accordion-head">Can I give monthly instead of one-time? <span class="plus"></span></div>
+          <div class="accordion-body"><p>Absolutely — and we encourage it. Monthly gifts give our grantee partners the stability to plan food and education programs year-round. Toggle "Monthly" above to get started.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <div class="accordion-head">Does my employer match donations? <span class="plus"></span></div>
+          <div class="accordion-body"><p>Many companies match employee gifts, including Microsoft (via MSGive), AT&amp;T, Esurance, Wells Fargo, Tellabs, ING, Liberty Mutual and eBay. Use the search box above or check with your HR department.</p></div>
+        </div>
+        <div class="accordion-item reveal">
+          <div class="accordion-head">Can I donate by check or wire instead of online? <span class="plus"></span></div>
+          <div class="accordion-body"><p>Yes — checks and money orders can be made payable to "Baal Dan Charities," and bank wires are available for larger gifts. <a href="contact.html" style="text-decoration:underline;">Contact us</a> for details.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-include="partials/footer.html"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
