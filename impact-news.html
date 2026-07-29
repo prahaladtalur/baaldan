@@ -23,10 +23,10 @@
   <!-- IMPACT -->
   <section>
     <div class="container stat-grid" style="color:var(--ink-900);">
-      <div class="stat reveal"><b data-count="14000" data-suffix="+" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">children supported since 2005</span></div>
-      <div class="stat reveal"><b data-count="1.1" data-suffix="%" data-decimals="1" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">operating costs, 2024</span></div>
-      <div class="stat reveal"><b data-count="100000" data-prefix="$" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">granted annually</span></div>
-      <div class="stat reveal"><b data-count="1000" data-suffix="+" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">children fed daily</span></div>
+      <div class="stat reveal"><b data-stat="childrenSupported" data-count="14000" data-suffix="+" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">children supported since 2005</span></div>
+      <div class="stat reveal"><b data-stat="overheadPercent" data-count="1.1" data-suffix="%" data-decimals="1" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">operating costs, 2024</span></div>
+      <div class="stat reveal"><b data-stat="grantsPerYear" data-count="100000" data-prefix="$" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">granted annually</span></div>
+      <div class="stat reveal"><b data-stat="childrenFedDaily" data-count="1000" data-suffix="+" style="color:var(--coral-600);">0</b><span style="color:var(--ink-500);">children fed daily</span></div>
     </div>
   </section>
 
@@ -58,11 +58,11 @@
         <h2>Events &amp; Fundraisers</h2>
       </div>
       <div class="two-col">
-        <div class="card reveal" style="border:2px solid var(--coral-500);">
-          <span class="pill">Upcoming · Wednesday, September 23, 2026</span>
-          <h3 style="margin-top:14px;">Networking for a Cause</h3>
-          <p>Join us in New York City at the RSM offices for an evening of networking in support of Baal Dan's work with vulnerable children worldwide.</p>
-          <a href="contact.html" class="btn btn-primary btn-sm">Reserve your spot</a>
+        <div class="card reveal" data-event-card style="border:2px solid var(--coral-500);">
+          <span class="pill" data-event-pill>Upcoming · Wednesday, September 23, 2026</span>
+          <h3 style="margin-top:14px;" data-event-title>Networking for a Cause</h3>
+          <p data-event-desc>Join us in New York City at the RSM offices for an evening of networking in support of Baal Dan's work with vulnerable children worldwide.</p>
+          <a href="contact.html" class="btn btn-primary btn-sm" data-event-cta>Reserve your spot</a>
         </div>
         <div class="reveal">
           <div class="timeline">
@@ -90,7 +90,7 @@
         <p class="eyebrow">Latest updates</p>
         <h2>News From the Field</h2>
       </div>
-      <div class="grid grid-3">
+      <div class="grid grid-3" data-news-grid>
 
         <div class="news-card reveal">
           <p class="news-date">July 1, 2026</p>

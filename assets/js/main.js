@@ -2,6 +2,109 @@
 (function () {
   "use strict";
 
+  /* ---------- Editable content (assets/data/content.json) ----------
+     Stats, testimonials, the upcoming event, and news items live in a
+     single JSON file so they can be updated through admin.html without
+     touching any HTML. If the fetch fails for any reason, every page
+     keeps whatever is already hardcoded in its markup as a fallback. */
+  function escapeHtml(str) {
+    return String(str == null ? "" : str).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function loadSiteContent() {
+    return fetch("assets/data/content.json")
+      .then(function (r) { if (!r.ok) throw new Error("content.json"); return r.json(); })
+      .then(function (data) {
+        renderStats(data);
+        renderTestimonials(data);
+        renderNewsAndEvent(data);
+      })
+      .catch(function () { /* keep static fallback markup as-is */ });
+  }
+
+  function renderStats(data) {
+    if (!data || !data.stats) return;
+    document.querySelectorAll("[data-stat]").forEach(function (el) {
+      var key = el.getAttribute("data-stat");
+      if (Object.prototype.hasOwnProperty.call(data.stats, key)) {
+        el.setAttribute("data-count", data.stats[key]);
+      }
+    });
+  }
+
+  function renderTestimonials(data) {
+    if (!data || !data.testimonials || !data.testimonials.length) return;
+
+    var slider = document.querySelector("[data-testimonial-slider]");
+    if (slider) {
+      var featured = data.testimonials.filter(function (t) { return t.featured; });
+      if (featured.length) {
+        var controls = slider.querySelector(".t-controls");
+        slider.querySelectorAll(".t-slide").forEach(function (el) { el.remove(); });
+        featured.forEach(function (t, i) {
+          var slide = document.createElement("div");
+          slide.className = "t-slide" + (i === 0 ? " active" : "");
+          slide.innerHTML =
+            '<p class="t-quote">' + escapeHtml(t.quote) + "</p>" +
+            '<p class="t-name">' + escapeHtml(t.name) + "</p>" +
+            '<p class="t-role">' + escapeHtml(t.role) + "</p>";
+          slider.insertBefore(slide, controls);
+        });
+      }
+    }
+
+    var grid = document.querySelector("[data-testimonials-grid]");
+    if (grid) {
+      grid.innerHTML = "";
+      data.testimonials.forEach(function (t) {
+        var card = document.createElement("div");
+        card.className = "card reveal";
+        card.innerHTML =
+          '<p class="quote-block" style="font-size:1.05rem;">' + escapeHtml(t.quote) + "</p>" +
+          '<p class="t-name">' + escapeHtml(t.name) + "</p>" +
+          '<p class="t-role">' + escapeHtml(t.role) + "</p>";
+        grid.appendChild(card);
+      });
+    }
+  }
+
+  function renderNewsAndEvent(data) {
+    if (data && data.event) {
+      var card = document.querySelector("[data-event-card]");
+      if (card) {
+        var pill = card.querySelector("[data-event-pill]");
+        var title = card.querySelector("[data-event-title]");
+        var desc = card.querySelector("[data-event-desc]");
+        var cta = card.querySelector("[data-event-cta]");
+        if (pill) pill.textContent = "Upcoming · " + data.event.dateLabel;
+        if (title) title.textContent = data.event.title;
+        if (desc) desc.textContent = data.event.description;
+        if (cta) {
+          cta.textContent = data.event.ctaLabel;
+          cta.setAttribute("href", data.event.ctaHref || "contact.html");
+        }
+      }
+    }
+
+    if (data && data.news && data.news.length) {
+      var grid = document.querySelector("[data-news-grid]");
+      if (grid) {
+        grid.innerHTML = "";
+        data.news.forEach(function (n) {
+          var card = document.createElement("div");
+          card.className = "news-card reveal";
+          card.innerHTML =
+            '<p class="news-date">' + escapeHtml(n.date) + "</p>" +
+            "<h3>" + escapeHtml(n.title) + "</h3>" +
+            "<p>" + escapeHtml(n.body) + "</p>";
+          grid.appendChild(card);
+        });
+      }
+    }
+  }
+
   /* ---------- Load shared header/footer partials ---------- */
   function loadPartials() {
     var slots = document.querySelectorAll("[data-include]");
@@ -319,16 +422,18 @@
   /* ---------- Init ---------- */
   document.addEventListener("DOMContentLoaded", function () {
     loadPartials();
-    initReveal();
-    initCounters();
-    initTestimonialSlider();
-    initAccordion();
-    initCountryCards();
-    initDonateForm();
-    initMatchSearch();
-    initDemoForms();
+    loadSiteContent().finally(function () {
+      initReveal();
+      initCounters();
+      initTestimonialSlider();
+      initAccordion();
+      initCountryCards();
+      initDonateForm();
+      initMatchSearch();
+      initDemoForms();
 
-    var yearEl = document.querySelector("[data-year]");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+      var yearEl = document.querySelector("[data-year]");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
   });
 })();

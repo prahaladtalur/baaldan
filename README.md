@@ -15,9 +15,12 @@ donate.html            Donation flow, ways to give, employee matching, testimoni
 little-hero-film.html  Little Hero short film
 contact.html           Contact form + Copyright & Privacy
 
+admin.html             No-code content editor (see Editing content below)
+
 assets/css/style.css   Design system (colors, type, components)
 assets/js/main.js      All interactivity (nav, dark mode, counters, slider, accordion, donate form)
 assets/img/            Hero and feature photography (see Photography below)
+assets/data/content.json  Impact stats, testimonials, news items, and the upcoming event
 partials/header.html   Shared header, injected client-side via fetch()
 partials/footer.html   Shared footer, injected client-side via fetch()
 ```
@@ -62,3 +65,15 @@ All copy, statistics, testimonials, grantee partners, news items, and bios were 
 ## Photography
 
 The photos in `assets/img/` are free-to-use stock images from [Unsplash](https://unsplash.com) (Unsplash License: free for commercial and non-commercial use), chosen to represent the regions and program types Baal Dan funds. None depict actual Baal Dan staff, donors, or beneficiaries. Swap them for real program photography as it becomes available. Every hero image is set via a single CSS rule (e.g. `.hero-home`, `.hero-about` in `assets/css/style.css`), so replacing a file is a one-line change.
+
+## Editing content (no code required)
+
+Impact stats, testimonials, news items, and the upcoming event live in `assets/data/content.json`, not hardcoded in the HTML, so they can be updated without touching any markup. `index.html`, `donate.html`, and `impact-news.html` all read from this file at load time via `assets/js/main.js` (falling back to whatever is already in the HTML if the fetch ever fails).
+
+`admin.html` is a small, self-contained editor for that file, meant for a non-technical site owner:
+
+1. Open `admin.html` on the live site (it's not linked from the nav, so only people with the URL will find it — share it directly rather than publicizing it).
+2. The first visit walks through a one-time setup: generate a [fine-grained GitHub personal access token](https://github.com/settings/personal-access-tokens/new) scoped to just this repo with **Contents: Read and write** permission, and paste it in. It's saved only in that browser's `localStorage`.
+3. From then on, the page loads the current content into a plain form (stats, testimonials, news, the event), and "Publish changes" commits the updated `content.json` straight to GitHub, no git commands, no editing JSON by hand. GitHub Pages picks up the change and republishes automatically within about a minute.
+
+This intentionally avoids standing up a real backend or OAuth app: it's a static page that talks directly to GitHub's REST API using the pasted token, the same approach tools like Prose.io and StackEdit use. If the project outgrows this (multiple editors, richer content types), migrating to a proper git-backed CMS like Decap CMS is the natural next step.

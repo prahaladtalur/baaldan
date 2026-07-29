@@ -1,0 +1,49 @@
+{
+  "stats": {
+    "childrenSupported": 14000,
+    "countries": 14,
+    "overheadPercent": 1.1,
+    "grantsPerYear": 100000,
+    "childrenFedDaily": 1000,
+    "yearsActive": 20
+  },
+  "testimonials": [
+    { "quote": "By donating to Baal Dan, you are helping children in need. Children are our future.", "name": "Mohit Gour", "role": "President, Market Xcel USA", "featured": true },
+    { "quote": "It is impressive to learn how Baal Dan mobilizes resources efficiently and overcomes obstacles.", "name": "Steven Lange", "role": "Corporate Relations, American Cancer Society", "featured": true },
+    { "quote": "Tanya Pinto has done amazing things with Baal Dan and others should learn from her experience.", "name": "David Charney", "role": "President, Stealth Monitoring", "featured": false },
+    { "quote": "I've followed Baal Dan since its beginnings, and what they've been able to accomplish is nothing short of remarkable.", "name": "Ron Henderson", "role": "Group Creative Director, TRG", "featured": false },
+    { "quote": "It's a joy giving to Baal Dan because you can see the impact it's made in children's lives over the years.", "name": "Quan Tran", "role": "Founder, Quan Tran Does", "featured": true },
+    { "quote": "I have had the privilege of witnessing the incredible impact of Baal Dan Charities in their mission.", "name": "Steve Quirk", "role": "President, Quirk's Media", "featured": false },
+    { "quote": "Hearing Tanya recount her experiences with vulnerable children in India struck a personal note for me.", "name": "Mel Ruffini", "role": "Construction Executive, NYC", "featured": false },
+    { "quote": "Tanya Pinto came to our martial arts summer camp and spent time explaining Baal Dan Charities.", "name": "Skyler Zoppi", "role": "President, True Martial Arts", "featured": false },
+    { "quote": "My family gives to Baal Dan because we know that 100% of our donations go directly to children.", "name": "Reed Cundiff", "role": "Board Member, Baal Dan", "featured": true },
+    { "quote": "Supporting Baal Dan Charities isn't a question. It's a necessity. Their work translates into real change.", "name": "Amy R. Castelda", "role": "Partner, W5", "featured": false },
+    { "quote": "You change generations when you change a child's life. This is a wonderful way to impact today.", "name": "Jami Pulley", "role": "CEO, Veridata", "featured": false },
+    { "quote": "Baal Dan Charities' unwavering dedication to supporting vulnerable children worldwide is truly inspiring.", "name": "April Bell", "role": "CEO, Made with Empathy", "featured": false },
+    { "quote": "The moment of clarity happened at a fundraising dinner. Tanya redefined a \"normal day.\"", "name": "Mat Varghese", "role": "Donor & Supporter, Dallas", "featured": false },
+    { "quote": "The hook for me was knowing that any effort towards supporting Baal Dan had a direct, short-term effect.", "name": "Jeenal Shah", "role": "Volunteer, New York City", "featured": false },
+    { "quote": "Helping others, especially children, is my passion. So when Baal Dan offered to help kids, I said yes.", "name": "Lulayn Awgichew", "role": "Volunteer, Ethiopia", "featured": false },
+    { "quote": "Most people I know are willing to give, but there's often a trust barrier that causes hesitation.", "name": "Jeremy Hastings", "role": "US Diplomat & Advisory Board Member", "featured": false },
+    { "quote": "Baal Dan is one of the very few international charities on this planet that is truly transparent.", "name": "Prem Menon", "role": "Former Baal Dan UT San Antonio President", "featured": false },
+    { "quote": "When you first started \"Baal Dan\" you had a lot of support because people believed in you.", "name": "Joe Mercer", "role": "The Richards Group", "featured": false }
+  ],
+  "event": {
+    "dateLabel": "Wednesday, September 23, 2026",
+    "title": "Networking for a Cause",
+    "description": "Join us in New York City at the RSM offices for an evening of networking in support of Baal Dan's work with vulnerable children worldwide.",
+    "ctaLabel": "Reserve your spot",
+    "ctaHref": "contact.html"
+  },
+  "news": [
+    { "date": "July 1, 2026", "title": "Light from the Lighthouse!", "body": "Children with special needs in South Africa are receiving daily meals, uniforms and supplies through the Lighthouse Center, where even $5 has significant purchasing power." },
+    { "date": "May 10, 2026", "title": "Happy Mother's Day!", "body": "With partner ASDEPO in Ethiopia, we're delivering food ration kits to mothers of severely malnourished children. Tanya shares what it meant to meet these mothers in person." },
+    { "date": "April 23, 2026", "title": "Helping children in Nepal", "body": "60 children with multiple disabilities in Bhaktapur now receive nutritious meals, medical care, and activities like music therapy and computer classes through CBR." },
+    { "date": "April 7, 2026", "title": "Save the Date! Wednesday, September 23, 2026", "body": "We're excited to announce our upcoming Networking for a Cause event in New York City at the RSM offices." },
+    { "date": "April 7, 2026", "title": "Where does your money go? Nepal Audit", "body": "David Grisanti's independent verification visit confirms proper fund allocation to our Nepal grantee partners, marking Baal Dan's 21st anniversary." },
+    { "date": "March 10, 2026", "title": "Thank you to our Baal Dan Luminaries!", "body": "Recognizing the generous donors who contributed $1,000 or more to support children's food, education and supplies this year." },
+    { "date": "February 14, 2026", "title": "Happy Valentine's Day!", "body": "A special appeal for $14+ donations to support children with special needs at the Lighthouse Center in South Africa." },
+    { "date": "January 26, 2026", "title": "What works in humanitarian aid?", "body": "Citing humanitarian expert David Miliband, we look at how simplified malnutrition treatment and transparent reporting drive real results across our four core countries." },
+    { "date": "January 26, 2026", "title": "We need more monthly donors!", "body": "Recurring gifts give our grantee partners the year-round funding stability they need to plan ahead for the children in their care." },
+    { "date": "January 26, 2026", "title": "Thank you Sir Mark Tully for being the \"voice of India\"", "body": "A tribute to the legendary BBC broadcaster, reflecting on his opening of the Turkahan School and his advice to keep sharing children's stories." }
+  ]
+}
