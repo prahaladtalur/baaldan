@@ -1,6 +1,6 @@
 # Baal Dan Charities Website Redesign
 
-A modern, donation-ready redesign of [baaldan.org](https://www.baaldan.org/) built to the visual and UX standard of large nonprofit sites (full-bleed photographic heroes, animated impact stats, program cards, testimonial carousel, transparency callouts), with all of the original site's content preserved and reorganized. The visual language (deep grassroots green, sun-baked clay accents, bold sans-serif type, documentary photography) takes cues from international NGO sites like [farmafrica.org](https://www.farmafrica.org/).
+A modern, donation-ready redesign of [baaldan.org](https://www.baaldan.org/) built to the visual and UX standard of large nonprofit sites (full-bleed photographic heroes, animated impact stats, program cards, testimonial carousel, transparency callouts), with all of the original site's content preserved and reorganized. The visual language, Baal Dan's own navy blue and flower mark (sampled directly from their logo), a warm clay accent for calls to action, bold sans-serif type, documentary photography, takes cues from international NGO sites like [farmafrica.org](https://www.farmafrica.org/) while staying true to the org's real brand identity.
 
 Pure static HTML/CSS/JS: **no build step, no dependencies, no framework.** Open it locally or drop it on any static host.
 
