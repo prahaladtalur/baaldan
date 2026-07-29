@@ -15,7 +15,7 @@ donate.html            Donation flow, ways to give, employee matching, testimoni
 little-hero-film.html  Little Hero short film
 contact.html           Contact form + Copyright & Privacy
 
-admin.html             No-code content editor (see Editing content below)
+admin/                 Decap CMS content editor (see Editing content below)
 
 assets/css/style.css   Design system (colors, type, components)
 assets/js/main.js      All interactivity (nav, dark mode, counters, slider, accordion, donate form)
@@ -70,10 +70,16 @@ The photos in `assets/img/` are free-to-use stock images from [Unsplash](https:/
 
 Impact stats, testimonials, news items, and the upcoming event live in `assets/data/content.json`, not hardcoded in the HTML, so they can be updated without touching any markup. `index.html`, `donate.html`, and `impact-news.html` all read from this file at load time via `assets/js/main.js` (falling back to whatever is already in the HTML if the fetch ever fails).
 
-`admin.html` is a small, self-contained editor for that file, meant for a non-technical site owner:
+Editing is done through [Decap CMS](https://decapcms.org/) (`admin/index.html` + `admin/config.yml`), a git-backed CMS built for exactly this: a plain form UI, and every save is a real commit to this repo. Because GitHub OAuth requires a server-side secret, Decap uses Netlify purely as an authentication relay. No part of the actual site moves to Netlify: GitHub Pages keeps serving the live site exactly as it does today.
 
-1. Open `admin.html` on the live site (it's not linked from the nav, so only people with the URL will find it — share it directly rather than publicizing it).
-2. The first visit walks through a one-time setup: generate a [fine-grained GitHub personal access token](https://github.com/settings/personal-access-tokens/new) scoped to just this repo with **Contents: Read and write** permission, and paste it in. It's saved only in that browser's `localStorage`.
-3. From then on, the page loads the current content into a plain form (stats, testimonials, news, the event), and "Publish changes" commits the updated `content.json` straight to GitHub, no git commands, no editing JSON by hand. GitHub Pages picks up the change and republishes automatically within about a minute.
+### One-time setup (do this once, not per edit)
 
-This intentionally avoids standing up a real backend or OAuth app: it's a static page that talks directly to GitHub's REST API using the pasted token, the same approach tools like Prose.io and StackEdit use. If the project outgrows this (multiple editors, richer content types), migrating to a proper git-backed CMS like Decap CMS is the natural next step.
+1. **Create a GitHub OAuth App**: go to [github.com/settings/developers](https://github.com/settings/developers) → OAuth Apps → New OAuth App.
+   - Homepage URL: anything (e.g. the Netlify URL from step 2, once you have it).
+   - Authorization callback URL: `https://api.netlify.com/auth/done` (exact value, this is Netlify's shared relay).
+   - Save, then generate a **Client Secret**. Keep the Client ID and Client Secret handy.
+2. **Deploy this same repo to Netlify** (used only to broker login, not to host the site): on [app.netlify.com](https://app.netlify.com), "Add new site" → "Import an existing project" → pick this GitHub repo. Accept the defaults and deploy (it's a static site, no build settings needed). This gives you a `*.netlify.app` URL.
+3. **Enable the OAuth provider on that Netlify site**: in its dashboard, go to Project configuration → Access & security → OAuth → Install provider → GitHub, and paste in the Client ID and Client Secret from step 1.
+4. **Editing happens at the Netlify URL's `/admin/` path** (e.g. `https://your-site-name.netlify.app/admin/`), not on the GitHub Pages URL: that's what makes the OAuth login resolve to the app you just configured. Bookmark that `/admin/` URL for whoever edits the site.
+
+After that one-time setup, editing is just: open the `/admin/` link, log in with GitHub the first time, edit stats/testimonials/news/the event in the form, and hit Publish. Changes commit straight to `main`, and GitHub Pages republishes automatically within about a minute.
