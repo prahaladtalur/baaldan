@@ -1,11 +1,11 @@
 /* =========================================================
-   Baal Dan Charities — Design System
+   Baal Dan Charities Design System
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root{
-  /* Brand palette — deep grassroots green + sun-baked clay, cream ground
+  /* Brand palette: deep grassroots green + sun-baked clay, cream ground
      (inspired by Farm Africa's earthy, photography-forward design) */
   --teal-900:#12261a;
   --teal-800:#1a3c26;
@@ -188,7 +188,7 @@ section{padding:96px 0;}
 .hero-film{--hero-img:url('../img/film-hero.jpg');background-position:center 15%;}
 .hero-contact{--hero-img:url('../img/contact-hero.jpg');}
 
-/* breadcrumb-ish page intro (non-home pages) — same photographic scrim treatment */
+/* breadcrumb-ish page intro (non-home pages), same photographic scrim treatment */
 .page-hero{color:#fff;padding:74px 0 84px;position:relative;overflow:hidden;
   background-color:var(--teal-900);
   background-image:linear-gradient(100deg, rgba(14,22,15,.9) 12%, rgba(14,22,15,.68) 46%, rgba(14,22,15,.3) 82%), var(--hero-img);
@@ -358,7 +358,7 @@ section{padding:96px 0;}
 }
 .cta-banner.photo .btn-light{color:var(--teal-800);}
 
-/* reveal on scroll — visible by default (no-JS / crawlers safe); JS opts elements
+/* reveal on scroll, visible by default (no-JS / crawlers safe); JS opts elements
    into the hidden→in animation only once it has actually run. */
 .reveal{transition:opacity .6s ease, transform .6s ease;}
 .reveal.pending{opacity:0;transform:translateY(24px);}

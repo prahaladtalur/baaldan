@@ -1,4 +1,4 @@
-/* Baal Dan Charities — site interactions (vanilla JS, no build step) */
+/* Baal Dan Charities site interactions (vanilla JS, no build step) */
 (function () {
   "use strict";
 
@@ -214,7 +214,7 @@
       100: "helps fund clean water & sanitation access for a family.",
       250: "supports a child's education sponsorship for a term.",
       500: "helps a grantee partner expand a nutrition program.",
-      1000: "makes you a Baal Dan Luminary — funding a program for a month."
+      1000: "makes you a Baal Dan Luminary, funding a program for a month."
     };
 
     function refreshImpact() {
@@ -287,8 +287,8 @@
       if (!val) return;
       var match = known.some(function (k) { return val.indexOf(k) !== -1; });
       result.textContent = match
-        ? "Great news — " + form.querySelector("input").value + " has matched Baal Dan gifts before. Check your HR portal or contact us and we'll help you submit the match."
-        : "We couldn't confirm " + form.querySelector("input").value + " in our records — many employers still match! Email us and we'll help you find out.";
+        ? "Great news, " + form.querySelector("input").value + " has matched Baal Dan gifts before. Check your HR portal or contact us and we'll help you submit the match."
+        : "We couldn't confirm " + form.querySelector("input").value + " in our records. Many employers still match! Email us and we'll help you find out.";
     });
   }
 
