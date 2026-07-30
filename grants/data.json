@@ -1,0 +1,110 @@
+{
+  "lastUpdated": "2026-07-30",
+  "profile": {
+    "orgType": "Volunteer-run US 501(c)(3) public charity, Federal EIN 20-4658983, founded 2005",
+    "budget": "Roughly $100,000 granted per year; operating costs consistently under 2.5%",
+    "missionAreas": ["Child nutrition and feeding programs", "Education (school supplies, tuition, sponsorships)", "WASH (water, sanitation, hygiene infrastructure)"],
+    "beneficiaries": "Orphans, street children, children with special needs, refugees, survivors of abuse and violence",
+    "countries": ["India", "Nepal", "Pakistan", "Zambia", "South Africa", "Haiti", "Ethiopia", "Ukraine"],
+    "model": "Makes micro-grants ($5,000 to $50,000) to vetted local grassroots partner organizations rather than running programs directly",
+    "corporatePartners": ["Microsoft (MSGive)", "AT&T", "Esurance", "Wells Fargo", "Tellabs", "ING", "Liberty Mutual", "eBay"]
+  },
+  "leads": [
+    {
+      "status": "new",
+      "funder": "Global Fund for Children",
+      "opportunity": "Grantee Partner Program (rolling letter of inquiry)",
+      "deadline": "Rolling; funding decisions made twice a year (June and December)",
+      "amount": "$5,000 to $20,000 annually (most new partners run $25,000 to $75,000 total budgets)",
+      "fit": "This is close to a direct match for how Baal Dan already operates: GFC exists specifically to fund small, undercapitalized organizations that work directly with vulnerable children, with an applicant budget cap of $200,000, comfortably above Baal Dan's scale. GFC does not fund advocacy/research-only groups, which fits since Baal Dan funds direct-service grassroots partners.",
+      "eligibilityNotes": "Requires a preliminary letter of inquiry first, and a track record of direct child-facing programming. Because GFC funds intermediary organizations too, this may be worth exploring both as a direct grant to Baal Dan and as a source of funding for Baal Dan's own grantee partners.",
+      "confidence": "high",
+      "source": "https://globalfundforchildren.org/",
+      "firstSeen": "2026-07-30"
+    },
+    {
+      "status": "new",
+      "funder": "Wells Fargo Foundation, Gratis Foundation program",
+      "opportunity": "International Humanitarian Aid grant category",
+      "deadline": "Application window June 1 to September 30 (annual)",
+      "amount": "Not publicly published; varies by award",
+      "fit": "Baal Dan already has an active relationship with Wells Fargo through employee matching gifts. The Gratis Foundation's International Humanitarian Aid category explicitly covers abused, neglected, and disadvantaged children, directly overlapping with Baal Dan's beneficiary population.",
+      "eligibilityNotes": "Wells Fargo's site describes this as invitation-only: eligible nonprofits receive an invitation code to apply. Worth a direct outreach to the existing Wells Fargo matching-gift contact to ask whether Baal Dan can be considered, rather than assuming an open application exists.",
+      "confidence": "medium",
+      "source": "https://www.wellsfargo.com/private-foundations/gratis-foundation/",
+      "firstSeen": "2026-07-30"
+    },
+    {
+      "status": "new",
+      "funder": "Oneness Revival Team",
+      "opportunity": "SEED Grant Program 2026",
+      "deadline": "December 20, 2026",
+      "amount": "$25,000 to $50,000 for one year",
+      "fit": "Open worldwide to registered NGOs with annual organizational budgets below $100,000, doing grassroots community impact work. The amount range matches the size of an individual Baal Dan grant closely.",
+      "eligibilityNotes": "Baal Dan's own annual budget (grants plus minimal overhead) is very close to the $100,000 eligibility ceiling, confirm the exact figure against the latest year's financials before applying. This funder is less established than the others on this list; verify legitimacy and past grantee history before investing application time.",
+      "confidence": "low",
+      "source": "https://www2.fundsforngos.org/community-development-2/applications-open-for-seed-grant-program/",
+      "firstSeen": "2026-07-30"
+    },
+    {
+      "status": "new",
+      "funder": "Unniti Foundation",
+      "opportunity": "General grants for women, girls, and grassroots organizational capacity",
+      "deadline": "Not publicly published; check directly",
+      "amount": "Not publicly published; check directly",
+      "fit": "Operates specifically in India and Nepal, two of Baal Dan's eight countries, with a focus on women and girls plus strengthening the institutional capacity of voluntary organizations, which lines up with Baal Dan's girls' education history (Loreto Sealdah School sponsorships).",
+      "eligibilityNotes": "Limited public detail on amounts or deadlines; this needs a direct inquiry to the foundation rather than an online application to confirm current cycle status.",
+      "confidence": "medium",
+      "source": "https://www.fundsforngos.org/foundation-funds-for-ngos/list-20-foundations-supporting-projects-children/",
+      "firstSeen": "2026-07-30"
+    },
+    {
+      "status": "new",
+      "funder": "Mérieux Foundation",
+      "opportunity": "Small Grants Programme",
+      "deadline": "March 1, 2026 (annual cycle; check for the following year's date after this one closes)",
+      "amount": "Up to €5,000",
+      "fit": "Targets grassroots organizations improving maternal and child health through infectious disease prevention, diagnosis, or treatment. Adjacent to Baal Dan's nutrition work rather than a direct overlap, and the award size is small relative to a typical Baal Dan grant, but the grassroots-only focus fits well.",
+      "eligibilityNotes": "2026 deadline has likely passed by the time this is reviewed; treat as a lead for the next annual cycle and confirm the new deadline directly with the foundation.",
+      "confidence": "low",
+      "source": "https://andpurpose.world/jwf-fund-2026-grants-for-water-sanitation-and-hygiene-projects/",
+      "firstSeen": "2026-07-30"
+    },
+    {
+      "status": "new",
+      "funder": "SBI Foundation (India)",
+      "opportunity": "Foundational literacy and numeracy program grants",
+      "deadline": "April 24, 2026",
+      "amount": "Not publicly published; check directly",
+      "fit": "India-specific and education-focused, but aimed at building government school teachers' capacity in classes 1 to 5 rather than Baal Dan's usual model of direct school-supply and tuition support. A partial fit worth a closer look rather than a clear match.",
+      "eligibilityNotes": "Confirm whether the program supports intermediary/grant-making organizations like Baal Dan, or requires the applicant to run the teacher training directly.",
+      "confidence": "low",
+      "source": "https://www2.fundsforngos.org/tag/nepal/",
+      "firstSeen": "2026-07-30"
+    },
+    {
+      "status": "monitor",
+      "funder": "UNICEF country offices (India, Nepal, Pakistan, Ethiopia, Haiti)",
+      "opportunity": "No specific dated call found this cycle; UNICEF regularly posts country-level NGO partnership and expression-of-interest opportunities for nutrition, WASH, and child protection through the UN Partner Portal",
+      "deadline": "Varies by country office and program",
+      "amount": "Varies widely (recent comparable EOIs ranged from roughly $45,000 to $400,000+)",
+      "fit": "UNICEF has active country offices in five of Baal Dan's eight countries of operation. Historically, these EOIs are aimed at larger implementing partners, but worth monitoring given the direct geographic and thematic overlap.",
+      "eligibilityNotes": "Requires registering on the UN Partner Portal (unpartnerportal.org) to see live opportunities by country; nothing to apply to yet, this is a channel to watch rather than a specific grant.",
+      "confidence": "low",
+      "source": "https://www.unpartnerportal.org/landing/opportunities/",
+      "firstSeen": "2026-07-30"
+    },
+    {
+      "status": "not-eligible",
+      "funder": "Liberty Mutual Foundation",
+      "opportunity": "Discretionary community grants",
+      "deadline": "n/a",
+      "amount": "n/a",
+      "fit": "Checked because Baal Dan has an existing employee-matching relationship with Liberty Mutual, but the Foundation's grantmaking is restricted to specific US metro areas (Greater Boston, Greater Puget Sound, select Washington State counties) and does not fund international work.",
+      "eligibilityNotes": "Ruled out. No need to re-research this one in future cycles unless Liberty Mutual's giving priorities change.",
+      "confidence": "high",
+      "source": "https://www.libertymutualgroup.com/about-lm/giving-back/liberty-mutual-foundation",
+      "firstSeen": "2026-07-30"
+    }
+  ]
+}

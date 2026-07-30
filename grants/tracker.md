@@ -1,6 +1,6 @@
-# Grant Leads Tracker
+# Grant Research Methodology
 
-This file is maintained by a monthly automated research routine (not a person), and is meant to be reviewed by Baal Dan's board before anyone spends time on an actual application. Nothing in here has been vetted for eligibility beyond a first-pass read of public program descriptions. Always confirm eligibility criteria (in-country registration, minimum budget size, invitation-only LOI processes, etc.) directly with the funder before applying.
+The actual, current list of grant leads lives in [`data.json`](./data.json) and is rendered at `grants/index.html`. This file documents the profile and matching criteria a weekly automated research routine uses to find and filter new leads (not a person), and is meant to be reviewed by Baal Dan's board before anyone spends time on an actual application. Nothing in `data.json` has been vetted for eligibility beyond a first-pass read of public program descriptions. Always confirm eligibility criteria (in-country registration, minimum budget size, invitation-only LOI processes, etc.) directly with the funder before applying.
 
 ## Baal Dan's funding profile (used to match grants)
 
@@ -16,10 +16,6 @@ This file is maintained by a monthly automated research routine (not a person), 
 
 Grants aimed at: international child welfare, nutrition/food security, WASH infrastructure, girls' education, small/grassroots-intermediary funding models, or general operating support for small international development nonprofits. Especially relevant if the funder explicitly supports any of Baal Dan's eight countries of operation, or has an existing relationship with one of the corporate partners listed above (many corporate foundations run separate grant programs beyond employee matching).
 
-## Leads
+## Status legend (used in `data.json`)
 
-| Status | Funder | Opportunity | Deadline | Amount | Why it fits | Source | First seen |
-|---|---|---|---|---|---|---|---|
-| _(none yet, first run will populate this)_ | | | | | | | |
-
-**Status legend**: `new` (found this cycle, needs board review) · `reviewing` · `applying` · `applied` · `passed` (board decided not to pursue) · `closed` (deadline passed or program ended)
+`new` (found this cycle, needs board review) · `monitor` (a channel to watch, not a specific dated opportunity) · `reviewing` · `applying` · `applied` · `passed` (board decided not to pursue) · `not-eligible` (checked and ruled out, kept on record so it isn't re-researched)
