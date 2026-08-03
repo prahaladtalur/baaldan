@@ -1,0 +1,10 @@
+{
+  "slug": "south-africa",
+  "name": "South Africa",
+  "flag": "🇿🇦",
+  "show_on_home": true,
+  "home_blurb": "Johannesburg: Lighthouse Center",
+  "programs_details": "Johannesburg: the Lighthouse Stimulation Center provides meals and uniforms for disabled children.",
+  "home_order": 3,
+  "programs_order": 5
+}

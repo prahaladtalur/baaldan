@@ -15,8 +15,8 @@
   <section class="page-hero hero-impact" id="impact">
     <div class="container">
       <p class="crumbs"><a href="index.html">Home</a> / Impact &amp; News</p>
-      <h1>Impact, Events &amp; News</h1>
-      <p class="lede">Independent audits, an upcoming fundraiser in New York, and the latest stories from the field.</p>
+      <h1><!-- cms:impact-news.hero_heading -->Impact, Events &amp; News<!-- /cms:impact-news.hero_heading --></h1>
+      <p class="lede"><!-- cms:impact-news.hero_lead -->Independent audits, an upcoming fundraiser in New York, and the latest stories from the field.<!-- /cms:impact-news.hero_lead --></p>
     </div>
   </section>
 
@@ -34,17 +34,17 @@
     <div class="container two-col">
       <div class="reveal">
         <p class="eyebrow">Verified on the ground</p>
-        <h2>Where does your money go? The Nepal Audit</h2>
-        <p>David Grisanti conducted an independent verification visit to our grantee organizations in Nepal, confirming that funds were properly allocated and put to work, a milestone that also marked Baal Dan's 21st anniversary.</p>
-        <p>It's part of a broader philosophy: as humanitarian expert David Miliband has noted, effective aid depends on simplified, targeted interventions (like malnutrition treatment) and transparent impact reporting. That's exactly the model Baal Dan follows across all four of our primary countries of operation.</p>
+        <h2><!-- cms:impact-news.audit_heading -->Where does your money go? The Nepal Audit<!-- /cms:impact-news.audit_heading --></h2>
+        <p><!-- cms:impact-news.audit_paragraph_1 -->David Grisanti conducted an independent verification visit to our grantee organizations in Nepal, confirming that funds were properly allocated and put to work, a milestone that also marked Baal Dan's 21st anniversary.<!-- /cms:impact-news.audit_paragraph_1 --></p>
+        <p><!-- cms:impact-news.audit_paragraph_2 -->It's part of a broader philosophy: as humanitarian expert David Miliband has noted, effective aid depends on simplified, targeted interventions (like malnutrition treatment) and transparent impact reporting. That's exactly the model Baal Dan follows across all four of our primary countries of operation.<!-- /cms:impact-news.audit_paragraph_2 --></p>
       </div>
       <div class="reveal">
         <div class="card accent">
           <p class="eyebrow" style="margin-bottom:6px;">Recognition</p>
-          <h3>Silver Seal of Transparency</h3>
-          <p>Awarded by Candid in 2024, recognizing our commitment to open, honest reporting on how every donation is used.</p>
+          <h3><!-- cms:impact-news.recognition_heading -->Silver Seal of Transparency<!-- /cms:impact-news.recognition_heading --></h3>
+          <p><!-- cms:impact-news.recognition_text -->Awarded by Candid in 2024, recognizing our commitment to open, honest reporting on how every donation is used.<!-- /cms:impact-news.recognition_text --></p>
           <div class="meter"><span style="width:1.1%;"></span></div>
-          <p style="font-size:.85rem;">1.1% overhead in 2024, under 2.5% every year since 2006.</p>
+          <p style="font-size:.85rem;"><!-- cms:impact-news.recognition_stat_text -->1.1% overhead in 2024, under 2.5% every year since 2006.<!-- /cms:impact-news.recognition_stat_text --></p>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Save the date</p>
-        <h2>Events &amp; Fundraisers</h2>
+        <h2><!-- cms:impact-news.events_heading -->Events &amp; Fundraisers<!-- /cms:impact-news.events_heading --></h2>
       </div>
       <div class="two-col">
         <div class="card reveal" data-event-card style="border:2px solid var(--coral-500);">
@@ -88,8 +88,10 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Latest updates</p>
-        <h2>News From the Field</h2>
+        <h2><!-- cms:impact-news.news_heading -->News From the Field<!-- /cms:impact-news.news_heading --></h2>
       </div>
+      <!-- Populated at runtime from assets/data/content.json (see main.js renderNewsAndEvent);
+           the cards below are a pre-JS fallback only, not directly CMS-managed. -->
       <div class="grid grid-3" data-news-grid>
 
         <div class="news-card reveal">
@@ -159,8 +161,8 @@
   <section>
     <div class="container">
       <div class="cta-banner photo reveal">
-        <h2>Become a monthly donor and give year-round stability.</h2>
-        <a href="donate.html" class="btn btn-light" style="margin-top:12px;">Give Monthly</a>
+        <h2><!-- cms:impact-news.cta_heading -->Become a monthly donor and give year-round stability.<!-- /cms:impact-news.cta_heading --></h2>
+        <a href="donate.html" class="btn btn-light" style="margin-top:12px;"><!-- cms:impact-news.cta_button -->Give Monthly<!-- /cms:impact-news.cta_button --></a>
       </div>
     </div>
   </section>
