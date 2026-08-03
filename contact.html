@@ -15,8 +15,8 @@
   <section class="page-hero hero-contact">
     <div class="container">
       <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
-      <h1>Contact Us</h1>
-      <p class="lede">Questions about donating, volunteering, company matching, or our upcoming event? We'd love to hear from you.</p>
+      <h1><!-- cms:contact.hero_heading -->Contact Us<!-- /cms:contact.hero_heading --></h1>
+      <p class="lede"><!-- cms:contact.hero_lead -->Questions about donating, volunteering, company matching, or our upcoming event? We'd love to hear from you.<!-- /cms:contact.hero_lead --></p>
     </div>
   </section>
 
@@ -24,7 +24,7 @@
     <div class="container two-col">
       <div class="reveal">
         <div class="donate-panel">
-          <h3 style="margin-bottom:18px;">Send a message</h3>
+          <h3 style="margin-bottom:18px;"><!-- cms:contact.form_heading -->Send a message<!-- /cms:contact.form_heading --></h3>
           <form data-demo-form data-success="Thanks for reaching out. We'll reply as soon as we can.">
             <div class="form-row">
               <div class="form-field"><label for="fname">First name</label><input id="fname" type="text" required></div>
@@ -51,30 +51,31 @@
 
       <div class="reveal">
         <p class="eyebrow">Get in touch</p>
-        <h2>We're a volunteer team, and we always write back.</h2>
-        <p>Whether you're mailing a check, asking about wire instructions, exploring company matching, or want to join us at Networking for a Cause on September 23, 2026 in New York City, reach out below.</p>
+        <h2><!-- cms:contact.intro_heading -->We're a volunteer team, and we always write back.<!-- /cms:contact.intro_heading --></h2>
+        <p><!-- cms:contact.intro_paragraph -->Whether you're mailing a check, asking about wire instructions, exploring company matching, or want to join us at Networking for a Cause on September 23, 2026 in New York City, reach out below.<!-- /cms:contact.intro_paragraph --></p>
 
         <div class="grid" style="margin-top:28px;">
           <div class="card" style="display:flex;gap:16px;align-items:flex-start;">
             <div class="icon" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg></div>
-            <div><h3 style="margin-bottom:4px;">Email</h3><p>Use the contact form, and our volunteer team will follow up by email, typically within a few business days.</p></div>
+            <div><h3 style="margin-bottom:4px;"><!-- cms:contact.info_1_heading -->Email<!-- /cms:contact.info_1_heading --></h3><p><!-- cms:contact.info_1_text -->Use the contact form, and our volunteer team will follow up by email, typically within a few business days.<!-- /cms:contact.info_1_text --></p></div>
           </div>
           <div class="card" style="display:flex;gap:16px;align-items:flex-start;">
             <div class="icon" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.6 20.6a17 17 0 01-8-4.2 17 17 0 01-4.2-8c-.2-1 .5-1.9 1.4-2.1L9 5.7c.8-.2 1.6.2 2 1l1.2 2.8c.3.7.1 1.5-.4 2l-1 .9a13 13 0 006 6l.9-1c.5-.5 1.3-.7 2-.4l2.8 1.2c.8.4 1.2 1.2 1 2l-.6 2.2c-.2.9-1.1 1.5-2.1 1.4-1.4-.2-2.9-.6-4.2-1.2z"/></svg></div>
-            <div><h3 style="margin-bottom:4px;">Networking for a Cause</h3><p>Wednesday, September 23, 2026: RSM offices, New York City. Ask about tickets and sponsorship in the form.</p></div>
+            <div><h3 style="margin-bottom:4px;"><!-- cms:contact.info_2_heading -->Networking for a Cause<!-- /cms:contact.info_2_heading --></h3><p><!-- cms:contact.info_2_text -->Wednesday, September 23, 2026: RSM offices, New York City. Ask about tickets and sponsorship in the form.<!-- /cms:contact.info_2_text --></p></div>
           </div>
           <div class="card" style="display:flex;gap:16px;align-items:flex-start;">
             <div class="icon" style="margin:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 9h16M9 4v5"/></svg></div>
-            <div><h3 style="margin-bottom:4px;">Mail a check</h3><p>Checks are payable to "Baal Dan Charities." Request our current mailing address through the form.</p></div>
+            <div><h3 style="margin-bottom:4px;"><!-- cms:contact.info_3_heading -->Mail a check<!-- /cms:contact.info_3_heading --></h3><p><!-- cms:contact.info_3_text -->Checks are payable to "Baal Dan Charities." Request our current mailing address through the form.<!-- /cms:contact.info_3_text --></p></div>
           </div>
         </div>
 
+        <!-- Social links are filled in at build time from content/settings/global.json (facebook_url, twitter_url, instagram_url, linkedin_url, youtube_url) -->
         <div class="social-row" style="margin-top:28px;">
-          <a href="https://facebook.com/BaalDan" aria-label="Facebook" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6C15.9 3.6 15 3.5 14 3.5c-2.6 0-4.3 1.6-4.3 4.4v2h-2.6V13h2.6v8h3.4z"/></svg></a>
-          <a href="https://twitter.com/baaldan" aria-label="X / Twitter" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H21l-6.7 7.6L22 21h-6.1l-4.8-6.3L5.6 21H3.4l7.2-8.1L3 3h6.3l4.3 5.8L18.9 3zm-1 16h1.2L8.1 4.9H6.8L17.9 19z"/></svg></a>
-          <a href="https://instagram.com/baaldan" aria-label="Instagram" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c2.7 0 3 0 4.1.06 1 .05 1.6.2 2 .35.5.2.9.4 1.3.8.4.4.6.8.8 1.3.15.4.3 1 .35 2 .05 1.1.06 1.4.06 4.1s0 3-.06 4.1c-.05 1-.2 1.6-.35 2-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.4.15-1 .3-2 .35-1.1.05-1.4.06-4.1.06s-3 0-4.1-.06c-1-.05-1.6-.2-2-.35-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.15-.4-.3-1-.35-2C2.2 15 2.2 14.7 2.2 12s0-3 .06-4.1c.05-1 .2-1.6.35-2 .2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.15 1-.3 2-.35C9 2.2 9.3 2.2 12 2.2zm0 1.8c-2.6 0-2.9 0-4 .06-.8.04-1.3.16-1.6.27-.4.15-.7.34-1 .63-.3.3-.48.6-.63 1-.1.3-.23.8-.27 1.6C4.4 8.6 4.4 8.9 4.4 11.5v1c0 2.6 0 2.9.06 4 .04.8.16 1.3.27 1.6.15.4.34.7.63 1 .3.3.6.48 1 .63.3.1.8.23 1.6.27 1.1.06 1.4.06 4 .06s2.9 0 4-.06c.8-.04 1.3-.16 1.6-.27.4-.15.7-.34 1-.63.3-.3.48-.6.63-1 .1-.3.23-.8.27-1.6.06-1.1.06-1.4.06-4v-1c0-2.6 0-2.9-.06-4-.04-.8-.16-1.3-.27-1.6a2.7 2.7 0 00-.63-1 2.7 2.7 0 00-1-.63c-.3-.1-.8-.23-1.6-.27-1.1-.06-1.4-.06-4-.06zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.8a3.2 3.2 0 100 6.4 3.2 3.2 0 000-6.4zm5.2-2a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
-          <a href="https://linkedin.com/company/baaldancharities" aria-label="LinkedIn" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.5V20h3.4V8.6zM5.2 3.5a2 2 0 100 4 2 2 0 000-4zM20.5 20h-3.4v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V20H9.4V8.6h3.3v1.6h.05c.46-.86 1.6-1.77 3.3-1.77 3.5 0 4.15 2.3 4.15 5.3V20z"/></svg></a>
-          <a href="https://youtube.com/@baaldan" aria-label="YouTube" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.1-.4-4.6c-.2-.9-.9-1.5-1.8-1.7C18.1 5.3 12 5.3 12 5.3s-6.1 0-7.8.4c-.9.2-1.6.8-1.8 1.7C2 8.9 2 12 2 12s0 3.1.4 4.6c.2.9.9 1.5 1.8 1.7 1.7.4 7.8.4 7.8.4s6.1 0 7.8-.4c.9-.2 1.6-.8 1.8-1.7.4-1.5.4-4.6.4-4.6zM10 15.2V8.8L15.8 12 10 15.2z"/></svg></a>
+          <a href="https://facebook.com/BaalDan" data-cms-social="facebook_url" aria-label="Facebook" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6C15.9 3.6 15 3.5 14 3.5c-2.6 0-4.3 1.6-4.3 4.4v2h-2.6V13h2.6v8h3.4z"/></svg></a>
+          <a href="https://twitter.com/baaldan" data-cms-social="twitter_url" aria-label="X / Twitter" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H21l-6.7 7.6L22 21h-6.1l-4.8-6.3L5.6 21H3.4l7.2-8.1L3 3h6.3l4.3 5.8L18.9 3zm-1 16h1.2L8.1 4.9H6.8L17.9 19z"/></svg></a>
+          <a href="https://instagram.com/baaldan" data-cms-social="instagram_url" aria-label="Instagram" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c2.7 0 3 0 4.1.06 1 .05 1.6.2 2 .35.5.2.9.4 1.3.8.4.4.6.8.8 1.3.15.4.3 1 .35 2 .05 1.1.06 1.4.06 4.1s0 3-.06 4.1c-.05 1-.2 1.6-.35 2-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.4.15-1 .3-2 .35-1.1.05-1.4.06-4.1.06s-3 0-4.1-.06c-1-.05-1.6-.2-2-.35-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.15-.4-.3-1-.35-2C2.2 15 2.2 14.7 2.2 12s0-3 .06-4.1c.05-1 .2-1.6.35-2 .2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.15 1-.3 2-.35C9 2.2 9.3 2.2 12 2.2zm0 1.8c-2.6 0-2.9 0-4 .06-.8.04-1.3.16-1.6.27-.4.15-.7.34-1 .63-.3.3-.48.6-.63 1-.1.3-.23.8-.27 1.6C4.4 8.6 4.4 8.9 4.4 11.5v1c0 2.6 0 2.9.06 4 .04.8.16 1.3.27 1.6.15.4.34.7.63 1 .3.3.6.48 1 .63.3.1.8.23 1.6.27 1.1.06 1.4.06 4 .06s2.9 0 4-.06c.8-.04 1.3-.16 1.6-.27.4-.15.7-.34 1-.63.3-.3.48-.6.63-1 .1-.3.23-.8.27-1.6.06-1.1.06-1.4.06-4v-1c0-2.6 0-2.9-.06-4-.04-.8-.16-1.3-.27-1.6a2.7 2.7 0 00-.63-1 2.7 2.7 0 00-1-.63c-.3-.1-.8-.23-1.6-.27-1.1-.06-1.4-.06-4-.06zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.8a3.2 3.2 0 100 6.4 3.2 3.2 0 000-6.4zm5.2-2a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
+          <a href="https://linkedin.com/company/baaldancharities" data-cms-social="linkedin_url" aria-label="LinkedIn" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.5V20h3.4V8.6zM5.2 3.5a2 2 0 100 4 2 2 0 000-4zM20.5 20h-3.4v-5.9c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V20H9.4V8.6h3.3v1.6h.05c.46-.86 1.6-1.77 3.3-1.77 3.5 0 4.15 2.3 4.15 5.3V20z"/></svg></a>
+          <a href="https://youtube.com/@baaldan" data-cms-social="youtube_url" aria-label="YouTube" target="_blank" rel="noopener" style="background:var(--teal-100);color:var(--teal-800);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.1-.4-4.6c-.2-.9-.9-1.5-1.8-1.7C18.1 5.3 12 5.3 12 5.3s-6.1 0-7.8.4c-.9.2-1.6.8-1.8 1.7C2 8.9 2 12 2 12s0 3.1.4 4.6c.2.9.9 1.5 1.8 1.7 1.7.4 7.8.4 7.8.4s6.1 0 7.8-.4c.9-.2 1.6-.8 1.8-1.7.4-1.5.4-4.6.4-4.6zM10 15.2V8.8L15.8 12 10 15.2z"/></svg></a>
         </div>
       </div>
     </div>
@@ -85,11 +86,11 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Legal</p>
-        <h2>Copyright &amp; Privacy</h2>
+        <h2><!-- cms:contact.legal_heading -->Copyright &amp; Privacy<!-- /cms:contact.legal_heading --></h2>
       </div>
       <div class="card reveal" style="max-width:760px;margin:0 auto;">
-        <p>© <span data-year>2026</span> Baal Dan Charities USA. All rights reserved. Baal Dan Charities is a 501(c)(3) US-registered public charity, Federal EIN 20-4658983.</p>
-        <p>Information submitted through this site is used solely to respond to your inquiry or process your donation, and is never sold to third parties. Payment processing for online gifts is handled securely by PayPal.</p>
+        <p><!-- cms:contact.legal_paragraph_1 -->© <span data-year>2026</span> Baal Dan Charities USA. All rights reserved. Baal Dan Charities is a 501(c)(3) US-registered public charity, Federal EIN 20-4658983.<!-- /cms:contact.legal_paragraph_1 --></p>
+        <p><!-- cms:contact.legal_paragraph_2 -->Information submitted through this site is used solely to respond to your inquiry or process your donation, and is never sold to third parties. Payment processing for online gifts is handled securely by PayPal.<!-- /cms:contact.legal_paragraph_2 --></p>
       </div>
     </div>
   </section>

@@ -1,0 +1,10 @@
+{
+  "slug": "nepal",
+  "name": "Nepal",
+  "flag": "🇳🇵",
+  "show_on_home": true,
+  "home_blurb": "Kathmandu &amp; earthquake-affected villages",
+  "programs_details": "Kathmandu and earthquake-affected villages; daily meals for children with disabilities via CBR in Bhaktapur.",
+  "home_order": 2,
+  "programs_order": 3
+}

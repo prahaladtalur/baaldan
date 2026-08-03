@@ -1,0 +1,17 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Temporary files and logs
+*.log
+*.tmp
+~$*
+
+# Generated deployment output
+dist/

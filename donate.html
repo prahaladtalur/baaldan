@@ -15,9 +15,9 @@
   <section class="hero compact hero-donate">
     <div class="container hero-grid">
       <div>
-        <p class="eyebrow" style="color:var(--gold-500);">Every gift, tracked to a program</p>
-        <h1>Fund a child's food, education, and future.</h1>
-        <p class="lede">100% volunteer-run means your donation goes to work immediately. Choose an amount and frequency below. No account required.</p>
+        <p class="eyebrow" style="color:var(--gold-500);"><!-- cms:donate.hero_eyebrow -->Every gift, tracked to a program<!-- /cms:donate.hero_eyebrow --></p>
+        <h1><!-- cms:donate.hero_heading -->Fund a child's food, education, and future.<!-- /cms:donate.hero_heading --></h1>
+        <p class="lede"><!-- cms:donate.hero_lead -->100% volunteer-run means your donation goes to work immediately. Choose an amount and frequency below. No account required.<!-- /cms:donate.hero_lead --></p>
         <div class="hero-badges">
           <div class="hero-badge"><b data-count="1.1" data-suffix="%" data-decimals="1">0</b><span>overhead, 2024</span></div>
           <div class="hero-badge"><b data-count="250" data-prefix="$">0</b><span>receipt threshold</span></div>
@@ -43,6 +43,7 @@
           <input type="number" id="custom-amount" min="1" placeholder="Enter a custom amount">
         </div>
         <div class="impact-line" data-impact-line></div>
+        <!-- data-paypal-business is filled in at build time from content/settings/global.json (paypal_business_email) -->
         <form id="donate-form" data-paypal-business="REPLACE_WITH_PAYPAL_BUSINESS_EMAIL">
           <button type="submit" class="btn btn-primary btn-block">
             Donate <span data-total-label style="font-weight:800;"></span>
@@ -58,27 +59,27 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">More ways to give</p>
-        <h2>Choose the method that works for you</h2>
+        <h2><!-- cms:donate.ways_heading -->Choose the method that works for you<!-- /cms:donate.ways_heading --></h2>
       </div>
       <div class="way-list">
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
-          <h3>Online via PayPal</h3>
-          <p>Our preferred method: secure, instant, and you'll receive an immediate email receipt for your records.</p>
+          <h3><!-- cms:donate.way_1_heading -->Online via PayPal<!-- /cms:donate.way_1_heading --></h3>
+          <p><!-- cms:donate.way_1_text -->Our preferred method: secure, instant, and you'll receive an immediate email receipt for your records.<!-- /cms:donate.way_1_text --></p>
         </div>
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4zM4 9h16M9 4v5"/></svg></div>
-          <h3>Check or money order</h3>
-          <p>Made payable to "Baal Dan Charities." <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Contact us</a> for our current mailing address.</p>
+          <h3><!-- cms:donate.way_2_heading -->Check or money order<!-- /cms:donate.way_2_heading --></h3>
+          <p><!-- cms:donate.way_2_text -->Made payable to "Baal Dan Charities." <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Contact us</a> for our current mailing address.<!-- /cms:donate.way_2_text --></p>
         </div>
         <div class="card reveal">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M4 10h16M12 3l8 5H4l8-5zM6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div>
-          <h3>Bank wire</h3>
-          <p>Available for larger gifts upon request. <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Reach out</a> and we'll send wire instructions.</p>
+          <h3><!-- cms:donate.way_3_heading -->Bank wire<!-- /cms:donate.way_3_heading --></h3>
+          <p><!-- cms:donate.way_3_text -->Available for larger gifts upon request. <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Reach out</a> and we'll send wire instructions.<!-- /cms:donate.way_3_text --></p>
         </div>
       </div>
       <div class="reveal" style="max-width:640px;margin:40px auto 0;text-align:center;">
-        <p style="font-size:.92rem;color:var(--ink-500);">Baal Dan holds 501(c)(3) tax-exempt status (Federal Tax ID 20-4658983). Donations are tax-deductible, and a formal receipt is provided for gifts over $250. Prefer to fund overhead directly, or offer pro bono professional services instead? <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Contact us</a>. We'd love to talk.</p>
+        <p style="font-size:.92rem;color:var(--ink-500);"><!-- cms:donate.ways_footnote -->Baal Dan holds 501(c)(3) tax-exempt status (Federal Tax ID 20-4658983). Donations are tax-deductible, and a formal receipt is provided for gifts over $250. Prefer to fund overhead directly, or offer pro bono professional services instead? <a href="contact.html" style="text-decoration:underline;color:var(--teal-800);">Contact us</a>. We'd love to talk.<!-- /cms:donate.ways_footnote --></p>
       </div>
     </div>
   </section>
@@ -88,8 +89,8 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Double your impact</p>
-        <h2>Employee Giving &amp; Company Matching</h2>
-        <p class="lede" style="margin:0 auto;">Many employers match charitable gifts dollar-for-dollar (or more). Check if yours does.</p>
+        <h2><!-- cms:donate.matching_heading -->Employee Giving &amp; Company Matching<!-- /cms:donate.matching_heading --></h2>
+        <p class="lede" style="margin:0 auto;"><!-- cms:donate.matching_lede -->Many employers match charitable gifts dollar-for-dollar (or more). Check if yours does.<!-- /cms:donate.matching_lede --></p>
       </div>
       <div class="reveal" style="max-width:520px;margin:0 auto;">
         <form id="match-form">
@@ -100,7 +101,7 @@
         </form>
         <div id="match-result" role="status"></div>
       </div>
-      <p style="text-align:center;margin-top:32px;color:var(--ink-500);font-size:.9rem;">Companies that have matched Baal Dan gifts before include:</p>
+      <p style="text-align:center;margin-top:32px;color:var(--ink-500);font-size:.9rem;"><!-- cms:donate.matching_companies_intro -->Companies that have matched Baal Dan gifts before include:<!-- /cms:donate.matching_companies_intro --></p>
       <div class="logo-strip reveal">
         <span class="logo-chip">Microsoft (MSGive)</span>
         <span class="logo-chip">AT&amp;T</span>
@@ -119,8 +120,10 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Why they give</p>
-        <h2>Donor Testimonials</h2>
+        <h2><!-- cms:donate.testimonials_heading -->Donor Testimonials<!-- /cms:donate.testimonials_heading --></h2>
       </div>
+      <!-- Populated at runtime from assets/data/content.json (see main.js renderTestimonials);
+           the cards below are a pre-JS fallback only, not directly CMS-managed. -->
       <div class="grid grid-3" data-testimonials-grid>
         <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">By donating to Baal Dan, you are helping children in need. Children are our future.</p><p class="t-name">Mohit Gour</p><p class="t-role">President, Market Xcel USA</p></div>
         <div class="card reveal"><p class="quote-block" style="font-size:1.05rem;">It is impressive to learn how Baal Dan mobilizes resources efficiently and overcomes obstacles.</p><p class="t-name">Steven Lange</p><p class="t-role">Corporate Relations, American Cancer Society</p></div>
@@ -149,28 +152,28 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Questions</p>
-        <h2>Giving FAQ</h2>
+        <h2><!-- cms:donate.faq_heading -->Giving FAQ<!-- /cms:donate.faq_heading --></h2>
       </div>
       <div style="max-width:720px;margin:0 auto;">
         <div class="accordion-item open reveal">
-          <div class="accordion-head">How is my donation used? <span class="plus"></span></div>
-          <div class="accordion-body" style="max-height:200px;"><p>Your donation supports orphanages, food and education programs, and can also sponsor a specific child's education. Because Baal Dan is entirely volunteer-run, nearly 100% of what you give goes directly to feeding and educating children in need.</p></div>
+          <div class="accordion-head"><!-- cms:donate.faq_1_q -->How is my donation used?<!-- /cms:donate.faq_1_q --> <span class="plus"></span></div>
+          <div class="accordion-body" style="max-height:200px;"><p><!-- cms:donate.faq_1_a -->Your donation supports orphanages, food and education programs, and can also sponsor a specific child's education. Because Baal Dan is entirely volunteer-run, nearly 100% of what you give goes directly to feeding and educating children in need.<!-- /cms:donate.faq_1_a --></p></div>
         </div>
         <div class="accordion-item reveal">
-          <div class="accordion-head">Is my gift tax-deductible? <span class="plus"></span></div>
-          <div class="accordion-body"><p>Yes. Baal Dan Charities is a 501(c)(3) public charity (Federal Tax ID 20-4658983). You'll receive a formal receipt for any gift over $250.</p></div>
+          <div class="accordion-head"><!-- cms:donate.faq_2_q -->Is my gift tax-deductible?<!-- /cms:donate.faq_2_q --> <span class="plus"></span></div>
+          <div class="accordion-body"><p><!-- cms:donate.faq_2_a -->Yes. Baal Dan Charities is a 501(c)(3) public charity (Federal Tax ID 20-4658983). You'll receive a formal receipt for any gift over $250.<!-- /cms:donate.faq_2_a --></p></div>
         </div>
         <div class="accordion-item reveal">
-          <div class="accordion-head">Can I give monthly instead of one-time? <span class="plus"></span></div>
-          <div class="accordion-body"><p>Absolutely. We encourage it. Monthly gifts give our grantee partners the stability to plan food and education programs year-round. Toggle "Monthly" above to get started.</p></div>
+          <div class="accordion-head"><!-- cms:donate.faq_3_q -->Can I give monthly instead of one-time?<!-- /cms:donate.faq_3_q --> <span class="plus"></span></div>
+          <div class="accordion-body"><p><!-- cms:donate.faq_3_a -->Absolutely. We encourage it. Monthly gifts give our grantee partners the stability to plan food and education programs year-round. Toggle "Monthly" above to get started.<!-- /cms:donate.faq_3_a --></p></div>
         </div>
         <div class="accordion-item reveal">
-          <div class="accordion-head">Does my employer match donations? <span class="plus"></span></div>
-          <div class="accordion-body"><p>Many companies match employee gifts, including Microsoft (via MSGive), AT&amp;T, Esurance, Wells Fargo, Tellabs, ING, Liberty Mutual and eBay. Use the search box above or check with your HR department.</p></div>
+          <div class="accordion-head"><!-- cms:donate.faq_4_q -->Does my employer match donations?<!-- /cms:donate.faq_4_q --> <span class="plus"></span></div>
+          <div class="accordion-body"><p><!-- cms:donate.faq_4_a -->Many companies match employee gifts, including Microsoft (via MSGive), AT&amp;T, Esurance, Wells Fargo, Tellabs, ING, Liberty Mutual and eBay. Use the search box above or check with your HR department.<!-- /cms:donate.faq_4_a --></p></div>
         </div>
         <div class="accordion-item reveal">
-          <div class="accordion-head">Can I donate by check or wire instead of online? <span class="plus"></span></div>
-          <div class="accordion-body"><p>Yes. Checks and money orders can be made payable to "Baal Dan Charities," and bank wires are available for larger gifts. <a href="contact.html" style="text-decoration:underline;">Contact us</a> for details.</p></div>
+          <div class="accordion-head"><!-- cms:donate.faq_5_q -->Can I donate by check or wire instead of online?<!-- /cms:donate.faq_5_q --> <span class="plus"></span></div>
+          <div class="accordion-body"><p><!-- cms:donate.faq_5_a -->Yes. Checks and money orders can be made payable to "Baal Dan Charities," and bank wires are available for larger gifts. <a href="contact.html" style="text-decoration:underline;">Contact us</a> for details.<!-- /cms:donate.faq_5_a --></p></div>
         </div>
       </div>
     </div>

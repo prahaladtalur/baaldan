@@ -1,0 +1,469 @@
+media:
+  input: assets/img/uploads
+  output: /assets/img/uploads
+  rename: safe
+  categories: [image]
+
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      create: "content: add {name}"
+      update: "content: update {name}"
+      delete: "content: remove {name}"
+
+content:
+  - name: testimonials
+    label: Donor testimonials
+    type: collection
+    path: content/testimonials
+    format: json
+    filename:
+      template: "{fields.slug}.json"
+      field: create
+    view:
+      primary: name
+      fields: [name, role, featured, published]
+      search: [name, role, quote]
+      sort: [order, name]
+    fields:
+      - name: slug
+        label: Record slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: role
+        label: Role / organization
+        type: string
+        required: true
+      - name: quote
+        label: Quote
+        type: text
+        required: true
+      - name: featured
+        label: "Feature on home page (rotating slider)"
+        type: boolean
+        required: true
+      - name: order
+        label: Display order
+        type: number
+        required: true
+      - name: published
+        label: Show on website
+        type: boolean
+        required: true
+
+  - name: news
+    label: News from the field
+    type: collection
+    path: content/news
+    format: json
+    filename:
+      template: "{fields.slug}.json"
+      field: create
+    view:
+      primary: title
+      fields: [title, date, published]
+      search: [title, body, date]
+      sort: [order, date]
+    fields:
+      - name: slug
+        label: Record slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: date
+        label: "Date (as displayed, e.g. \"July 1, 2026\")"
+        type: string
+        required: true
+      - name: title
+        label: Headline
+        type: string
+        required: true
+      - name: body
+        label: Body
+        type: text
+        required: true
+      - name: order
+        label: Display order
+        type: number
+        required: true
+      - name: published
+        label: Show on website
+        type: boolean
+        required: true
+
+  - name: partners
+    label: Grantee partners
+    type: collection
+    path: content/partners
+    format: json
+    filename:
+      template: "{fields.slug}.json"
+      field: create
+    view:
+      primary: name
+      fields: [name, tag, published]
+      search: [name, tag, description]
+      sort: [order, name]
+    fields:
+      - name: slug
+        label: Record slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: name
+        label: Partner name
+        type: string
+        required: true
+      - name: tag
+        label: "Location tag (may include &middot; separators)"
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: order
+        label: Display order
+        type: number
+        required: true
+      - name: published
+        label: Show on website
+        type: boolean
+        required: true
+
+  - name: countries
+    label: Countries where we work
+    type: collection
+    path: content/countries
+    format: json
+    filename:
+      template: "{fields.slug}.json"
+      field: create
+    view:
+      primary: name
+      fields: [name, show_on_home, published]
+      search: [name]
+      sort: [programs_order, name]
+    fields:
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: name
+        label: Country name
+        type: string
+        required: true
+      - name: flag
+        label: Flag emoji
+        type: string
+        required: true
+      - name: published
+        label: Show on website
+        type: boolean
+        required: true
+      - name: programs_details
+        label: "Programs page: WASH / grant details"
+        type: text
+        required: true
+      - name: programs_order
+        label: "Programs page: display order"
+        type: number
+        required: true
+      - name: show_on_home
+        label: "Feature in the homepage teaser grid"
+        type: boolean
+        required: true
+      - name: home_blurb
+        label: "Homepage teaser: short blurb"
+        type: string
+        description: Required only when "Feature in the homepage teaser grid" is on.
+      - name: home_order
+        label: "Homepage teaser: display order"
+        type: number
+        description: Required only when "Feature in the homepage teaser grid" is on.
+
+  # Each page below is a standalone file (not a repeating collection) because every
+  # page has its own fixed set of text fields, not a uniform record shape. Add a new
+  # "type: file" entry here (with a matching content/pages/<slug>.json) for any new
+  # page that needs CMS-editable text.
+  - name: home
+    label: "Website Pages: Home"
+    type: file
+    path: content/pages/home.json
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: published, label: Show on website, type: boolean, required: true }
+      - { name: hero_eyebrow, label: "Hero: eyebrow", type: string }
+      - { name: hero_heading, label: "Hero: heading", type: string }
+      - { name: hero_sub, label: "Hero: subheading", type: text }
+      - { name: hero_button_primary, label: "Hero: primary button", type: string }
+      - { name: hero_button_secondary, label: "Hero: secondary button", type: string }
+      - { name: hero_card_pill, label: "Hero card: pill label", type: string }
+      - { name: hero_card_heading, label: "Hero card: heading", type: string }
+      - { name: hero_card_text, label: "Hero card: text", type: text }
+      - { name: hero_card_button, label: "Hero card: button", type: string }
+      - { name: mission_heading, label: "Mission: heading", type: string }
+      - { name: mission_lede, label: "Mission: lede", type: text }
+      - { name: mission_paragraph, label: "Mission: paragraph", type: text }
+      - { name: mission_quote, label: "Mission: Mother Teresa quote", type: text }
+      - { name: crisis_heading, label: "Mission card: crisis heading", type: string }
+      - { name: crisis_point_1, label: "Mission card: crisis point 1", type: text }
+      - { name: crisis_point_2, label: "Mission card: crisis point 2", type: text }
+      - { name: crisis_point_3, label: "Mission card: crisis point 3", type: text }
+      - { name: programs_heading, label: "Programs preview: heading", type: string }
+      - { name: programs_intro, label: "Programs preview: intro", type: text }
+      - { name: programs_button, label: "Programs preview: button", type: string }
+      - { name: program_1_heading, label: "Programs preview, card 1: heading", type: string }
+      - { name: program_1_text, label: "Programs preview, card 1: text", type: text }
+      - { name: program_2_heading, label: "Programs preview, card 2: heading", type: string }
+      - { name: program_2_text, label: "Programs preview, card 2: text", type: text }
+      - { name: program_3_heading, label: "Programs preview, card 3: heading", type: string }
+      - { name: program_3_text, label: "Programs preview, card 3: text", type: text }
+      - { name: reach_heading, label: "Country reach: heading", type: string }
+      - { name: reach_button, label: "Country reach: button", type: string }
+      - { name: transparency_heading, label: "Transparency: heading", type: string }
+      - { name: transparency_lede, label: "Transparency: lede", type: text }
+      - { name: transparency_badge, label: "Transparency: badge text", type: string }
+      - { name: transparency_panel_label, label: "Transparency panel: label", type: string }
+      - { name: transparency_panel_text, label: "Transparency panel: text (may include <strong>)", type: text }
+      - { name: testimonials_heading, label: "Testimonials: heading", type: string }
+      - { name: testimonials_button, label: "Testimonials: button", type: string }
+      - { name: cta_heading, label: "Closing CTA: heading", type: string }
+      - { name: cta_text, label: "Closing CTA: text", type: text }
+      - { name: cta_button, label: "Closing CTA: button", type: string }
+
+  - name: about-page
+    label: "Website Pages: About"
+    type: file
+    path: content/pages/about.json
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: published, label: Show on website, type: boolean, required: true }
+      - { name: hero_heading, label: Hero heading, type: string }
+      - { name: hero_lead, label: Hero lead, type: text }
+      - { name: who_heading, label: "Who we are: heading", type: string }
+      - { name: who_paragraph_1, label: "Who we are: paragraph 1", type: text }
+      - { name: who_paragraph_2, label: "Who we are: paragraph 2", type: text }
+      - { name: who_paragraph_3, label: "Who we are: paragraph 3", type: text }
+      - { name: glance_founded, label: "At a glance: founded", type: string }
+      - { name: glance_status, label: "At a glance: status", type: string }
+      - { name: glance_ein, label: "At a glance: EIN", type: string }
+      - { name: glance_reach, label: "At a glance: reach", type: string }
+      - { name: glance_overhead, label: "At a glance: overhead", type: string }
+      - { name: glance_recognition, label: "At a glance: recognition", type: string }
+      - { name: approach_heading, label: "Grassroots approach: heading", type: string }
+      - { name: approach_lede, label: "Grassroots approach: lede", type: text }
+      - { name: approach_1_heading, label: "Grassroots approach, card 1: heading", type: string }
+      - { name: approach_1_text, label: "Grassroots approach, card 1: text", type: text }
+      - { name: approach_2_heading, label: "Grassroots approach, card 2: heading", type: string }
+      - { name: approach_2_text, label: "Grassroots approach, card 2: text", type: text }
+      - { name: approach_3_heading, label: "Grassroots approach, card 3: heading", type: string }
+      - { name: approach_3_text, label: "Grassroots approach, card 3: text", type: text }
+      - { name: approach_quote, label: "Grassroots approach: closing quote", type: text }
+      - { name: tanya_eyebrow, label: "Tanya Pinto: eyebrow", type: string }
+      - { name: tanya_paragraph_1, label: "Tanya Pinto: paragraph 1", type: text }
+      - { name: tanya_paragraph_2, label: "Tanya Pinto: paragraph 2", type: text }
+      - { name: tanya_paragraph_3, label: "Tanya Pinto: paragraph 3", type: text }
+      - { name: tanya_paragraph_4, label: "Tanya Pinto: paragraph 4", type: text }
+      - { name: tanya_award_1, label: "Tanya Pinto: award 1", type: string }
+      - { name: tanya_award_2, label: "Tanya Pinto: award 2", type: string }
+      - { name: tanya_award_3, label: "Tanya Pinto: award 3", type: string }
+      - { name: tanya_award_4, label: "Tanya Pinto: award 4", type: string }
+      - { name: tanya_quote, label: "Tanya Pinto: guiding quote", type: text }
+      - { name: tanya_quote_sub, label: "Tanya Pinto: quote sub-text", type: text }
+      - { name: team_heading, label: "Our team: heading", type: string }
+      - { name: team_lede, label: "Our team: lede", type: text }
+      - { name: team_1_heading, label: "Team card 1: heading", type: string }
+      - { name: team_1_text, label: "Team card 1: text", type: text }
+      - { name: team_2_heading, label: "Team card 2: heading", type: string }
+      - { name: team_2_text, label: "Team card 2: text", type: text }
+      - { name: team_3_heading, label: "Team card 3: heading", type: string }
+      - { name: team_3_text, label: "Team card 3: text", type: text }
+      - { name: team_4_heading, label: "Team card 4: heading", type: string }
+      - { name: team_4_text, label: "Team card 4: text", type: text }
+      - { name: team_5_heading, label: "Team card 5: heading", type: string }
+      - { name: team_5_text, label: "Team card 5: text", type: text }
+      - { name: past_board_heading, label: "Past board service: heading", type: string }
+      - { name: past_board_1, label: "Past board: name 1", type: string }
+      - { name: past_board_2, label: "Past board: name 2", type: string }
+      - { name: past_board_3, label: "Past board: name 3", type: string }
+      - { name: past_board_4, label: "Past board: name 4", type: string }
+      - { name: past_board_5, label: "Past board: name 5", type: string }
+      - { name: past_board_6, label: "Past board: name 6", type: string }
+      - { name: cta_heading, label: "Closing CTA: heading", type: string }
+      - { name: cta_button, label: "Closing CTA: button", type: string }
+
+  - name: programs-page
+    label: "Website Pages: Programs"
+    type: file
+    path: content/pages/programs.json
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: published, label: Show on website, type: boolean, required: true }
+      - { name: hero_heading, label: Hero heading, type: string }
+      - { name: hero_lead, label: Hero lead, type: text }
+      - { name: fund_1_heading, label: "What we fund, card 1: heading", type: string }
+      - { name: fund_1_text, label: "What we fund, card 1: text", type: text }
+      - { name: fund_2_heading, label: "What we fund, card 2: heading", type: string }
+      - { name: fund_2_text, label: "What we fund, card 2: text", type: text }
+      - { name: fund_3_heading, label: "What we fund, card 3: heading", type: string }
+      - { name: fund_3_text, label: "What we fund, card 3: text", type: text }
+      - { name: who_benefits_heading, label: "Who benefits: heading", type: string }
+      - { name: benefit_1, label: "Who benefits: tag 1", type: string }
+      - { name: benefit_2, label: "Who benefits: tag 2", type: string }
+      - { name: benefit_3, label: "Who benefits: tag 3", type: string }
+      - { name: benefit_4, label: "Who benefits: tag 4", type: string }
+      - { name: benefit_5, label: "Who benefits: tag 5", type: string }
+      - { name: benefit_6, label: "Who benefits: tag 6", type: string }
+      - { name: field_heading, label: "In the field: heading", type: string }
+      - { name: field_intro_1_heading, label: "In the field, card 1: heading", type: string }
+      - { name: field_intro_1_text, label: "In the field, card 1: text", type: text }
+      - { name: field_intro_2_heading, label: "In the field, card 2: heading", type: string }
+      - { name: field_intro_2_text, label: "In the field, card 2: text", type: text }
+      - { name: countries_heading, label: "Country grid: heading", type: string }
+      - { name: countries_lede, label: "Country grid: lede", type: text }
+      - { name: partners_heading, label: "Grantee partners: heading", type: string }
+      - { name: partners_lede, label: "Grantee partners: lede", type: text }
+      - { name: cta_heading, label: "Closing CTA: heading", type: string }
+      - { name: cta_button, label: "Closing CTA: button", type: string }
+
+  - name: donate-page
+    label: "Website Pages: Donate"
+    type: file
+    path: content/pages/donate.json
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: published, label: Show on website, type: boolean, required: true }
+      - { name: hero_eyebrow, label: Hero eyebrow, type: string }
+      - { name: hero_heading, label: Hero heading, type: string }
+      - { name: hero_lead, label: Hero lead, type: text }
+      - { name: ways_heading, label: "Ways to give: heading", type: string }
+      - { name: way_1_heading, label: "Ways to give, card 1: heading", type: string }
+      - { name: way_1_text, label: "Ways to give, card 1: text", type: text }
+      - { name: way_2_heading, label: "Ways to give, card 2: heading", type: string }
+      - { name: way_2_text, label: "Ways to give, card 2: text (may include an <a> link)", type: text }
+      - { name: way_3_heading, label: "Ways to give, card 3: heading", type: string }
+      - { name: way_3_text, label: "Ways to give, card 3: text (may include an <a> link)", type: text }
+      - { name: ways_footnote, label: "Ways to give: footnote (may include an <a> link)", type: text }
+      - { name: matching_heading, label: "Company matching: heading", type: string }
+      - { name: matching_lede, label: "Company matching: lede", type: text }
+      - { name: matching_companies_intro, label: "Company matching: companies intro", type: string }
+      - { name: testimonials_heading, label: "Testimonials: heading", type: string }
+      - { name: faq_heading, label: "FAQ: heading", type: string }
+      - { name: faq_1_q, label: "FAQ 1: question", type: string }
+      - { name: faq_1_a, label: "FAQ 1: answer", type: text }
+      - { name: faq_2_q, label: "FAQ 2: question", type: string }
+      - { name: faq_2_a, label: "FAQ 2: answer", type: text }
+      - { name: faq_3_q, label: "FAQ 3: question", type: string }
+      - { name: faq_3_a, label: "FAQ 3: answer", type: text }
+      - { name: faq_4_q, label: "FAQ 4: question", type: string }
+      - { name: faq_4_a, label: "FAQ 4: answer", type: text }
+      - { name: faq_5_q, label: "FAQ 5: question", type: string }
+      - { name: faq_5_a, label: "FAQ 5: answer (may include an <a> link)", type: text }
+
+  - name: impact-news-page
+    label: "Website Pages: Impact & News"
+    type: file
+    path: content/pages/impact-news.json
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: published, label: Show on website, type: boolean, required: true }
+      - { name: hero_heading, label: Hero heading, type: string }
+      - { name: hero_lead, label: Hero lead, type: text }
+      - { name: audit_heading, label: "Nepal audit: heading", type: string }
+      - { name: audit_paragraph_1, label: "Nepal audit: paragraph 1", type: text }
+      - { name: audit_paragraph_2, label: "Nepal audit: paragraph 2", type: text }
+      - { name: recognition_heading, label: "Recognition: heading", type: string }
+      - { name: recognition_text, label: "Recognition: text", type: text }
+      - { name: recognition_stat_text, label: "Recognition: stat line", type: text }
+      - { name: events_heading, label: "Events: heading", type: string }
+      - { name: news_heading, label: "News: heading", type: string }
+      - { name: cta_heading, label: "Closing CTA: heading", type: string }
+      - { name: cta_button, label: "Closing CTA: button", type: string }
+
+  - name: contact-page
+    label: "Website Pages: Contact"
+    type: file
+    path: content/pages/contact.json
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: published, label: Show on website, type: boolean, required: true }
+      - { name: hero_heading, label: Hero heading, type: string }
+      - { name: hero_lead, label: Hero lead, type: text }
+      - { name: form_heading, label: "Form: heading", type: string }
+      - { name: intro_heading, label: "Get in touch: heading", type: string }
+      - { name: intro_paragraph, label: "Get in touch: paragraph", type: text }
+      - { name: info_1_heading, label: "Info card 1: heading", type: string }
+      - { name: info_1_text, label: "Info card 1: text", type: text }
+      - { name: info_2_heading, label: "Info card 2: heading", type: string }
+      - { name: info_2_text, label: "Info card 2: text", type: text }
+      - { name: info_3_heading, label: "Info card 3: heading", type: string }
+      - { name: info_3_text, label: "Info card 3: text", type: text }
+      - { name: legal_heading, label: "Legal: heading", type: string }
+      - { name: legal_paragraph_1, label: "Legal: paragraph 1", type: text }
+      - { name: legal_paragraph_2, label: "Legal: paragraph 2", type: text }
+
+  - name: little-hero-film-page
+    label: "Website Pages: Little Hero Film"
+    type: file
+    path: content/pages/little-hero-film.json
+    fields:
+      - { name: slug, type: string, required: true }
+      - { name: published, label: Show on website, type: boolean, required: true }
+      - { name: hero_heading, label: Hero heading, type: string }
+      - { name: hero_lead, label: Hero lead, type: text }
+      - { name: story_heading, label: "Story: heading", type: string }
+      - { name: story_paragraph_1, label: "Story: paragraph 1", type: text }
+      - { name: story_paragraph_2, label: "Story: paragraph 2", type: text }
+      - { name: story_button, label: "Story: button", type: string }
+      - { name: tag_1, label: "Tag 1", type: string }
+      - { name: tag_2, label: "Tag 2", type: string }
+      - { name: tag_3, label: "Tag 3", type: string }
+      - { name: cta_heading, label: "Closing CTA: heading", type: string }
+      - { name: cta_text, label: "Closing CTA: text", type: text }
+      - { name: cta_button, label: "Closing CTA: button", type: string }
+
+  - name: global-settings
+    label: "Website Pages: Global (footer &amp; social)"
+    type: file
+    path: content/settings/global.json
+    fields:
+      - { name: footer_tagline, label: Footer tagline, type: text }
+      - { name: copyright_line, label: "Footer copyright line (after the year, e.g. \"All rights reserved. EIN 20-4658983.\")", type: string }
+      - { name: paypal_business_email, label: "PayPal business email (used on the Donate page form)", type: string }
+      - { name: facebook_url, label: Facebook URL, type: string }
+      - { name: twitter_url, label: X / Twitter URL, type: string }
+      - { name: instagram_url, label: Instagram URL, type: string }
+      - { name: linkedin_url, label: LinkedIn URL, type: string }
+      - { name: youtube_url, label: YouTube URL, type: string }
+
+  - name: stats-settings
+    label: "Website Pages: Impact stats"
+    type: file
+    path: content/settings/stats.json
+    fields:
+      - { name: childrenSupported, label: "Children supported (total)", type: number, required: true }
+      - { name: countries, label: Countries reached, type: number, required: true }
+      - { name: overheadPercent, label: "Overhead rate (%)", type: number, required: true }
+      - { name: grantsPerYear, label: "Granted per year ($)", type: number, required: true }
+      - { name: childrenFedDaily, label: Children fed daily, type: number, required: true }
+      - { name: yearsActive, label: Years active, type: number, required: true }
+
+  - name: event-settings
+    label: "Website Pages: Upcoming event"
+    type: file
+    path: content/settings/event.json
+    fields:
+      - { name: dateLabel, label: Date, type: string, required: true }
+      - { name: title, label: Event name, type: string, required: true }
+      - { name: description, label: Description, type: text, required: true }
+      - { name: ctaLabel, label: Button text, type: string, required: true }
+      - { name: ctaHref, label: Button link, type: string, required: true }
