@@ -2,7 +2,7 @@ name: Deploy website
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/baaldan-website-redesign-jzbi2s]
   workflow_dispatch:
 
 permissions:
